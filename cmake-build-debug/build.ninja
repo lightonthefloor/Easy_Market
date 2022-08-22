@@ -1,0 +1,168 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Easy_Market
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target Easy_Market
+
+
+#############################################
+# Order-only phony target for Easy_Market
+
+build cmake_object_order_depends_target_Easy_Market: phony || CMakeFiles/Easy_Market.dir
+
+build CMakeFiles/Easy_Market.dir/main.c.o: C_COMPILER__Easy_Market_Debug /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/main.c || cmake_object_order_depends_target_Easy_Market
+  DEP_FILE = CMakeFiles/Easy_Market.dir/main.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INCLUDES = -I/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Inc
+  OBJECT_DIR = CMakeFiles/Easy_Market.dir
+  OBJECT_FILE_DIR = CMakeFiles/Easy_Market.dir
+
+build CMakeFiles/Easy_Market.dir/Libs/Src/Customers.c.o: C_COMPILER__Easy_Market_Debug /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Src/Customers.c || cmake_object_order_depends_target_Easy_Market
+  DEP_FILE = CMakeFiles/Easy_Market.dir/Libs/Src/Customers.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INCLUDES = -I/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Inc
+  OBJECT_DIR = CMakeFiles/Easy_Market.dir
+  OBJECT_FILE_DIR = CMakeFiles/Easy_Market.dir/Libs/Src
+
+build CMakeFiles/Easy_Market.dir/Libs/Src/Manager.c.o: C_COMPILER__Easy_Market_Debug /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Src/Manager.c || cmake_object_order_depends_target_Easy_Market
+  DEP_FILE = CMakeFiles/Easy_Market.dir/Libs/Src/Manager.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INCLUDES = -I/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Inc
+  OBJECT_DIR = CMakeFiles/Easy_Market.dir
+  OBJECT_FILE_DIR = CMakeFiles/Easy_Market.dir/Libs/Src
+
+build CMakeFiles/Easy_Market.dir/Libs/Src/Product.c.o: C_COMPILER__Easy_Market_Debug /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Src/Product.c || cmake_object_order_depends_target_Easy_Market
+  DEP_FILE = CMakeFiles/Easy_Market.dir/Libs/Src/Product.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INCLUDES = -I/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Inc
+  OBJECT_DIR = CMakeFiles/Easy_Market.dir
+  OBJECT_FILE_DIR = CMakeFiles/Easy_Market.dir/Libs/Src
+
+build CMakeFiles/Easy_Market.dir/Libs/Src/Order.c.o: C_COMPILER__Easy_Market_Debug /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Src/Order.c || cmake_object_order_depends_target_Easy_Market
+  DEP_FILE = CMakeFiles/Easy_Market.dir/Libs/Src/Order.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INCLUDES = -I/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/Libs/Inc
+  OBJECT_DIR = CMakeFiles/Easy_Market.dir
+  OBJECT_FILE_DIR = CMakeFiles/Easy_Market.dir/Libs/Src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Easy_Market
+
+
+#############################################
+# Link the executable Easy_Market
+
+build Easy_Market: C_EXECUTABLE_LINKER__Easy_Market_Debug CMakeFiles/Easy_Market.dir/main.c.o CMakeFiles/Easy_Market.dir/Libs/Src/Customers.c.o CMakeFiles/Easy_Market.dir/Libs/Src/Manager.c.o CMakeFiles/Easy_Market.dir/Libs/Src/Product.c.o CMakeFiles/Easy_Market.dir/Libs/Src/Order.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  OBJECT_DIR = CMakeFiles/Easy_Market.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Easy_Market
+  TARGET_PDB = Easy_Market.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market -B/Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/trisoil/Desktop/计算机实习/Codes/Easy_Market/cmake-build-debug
+
+build all: phony Easy_Market
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
