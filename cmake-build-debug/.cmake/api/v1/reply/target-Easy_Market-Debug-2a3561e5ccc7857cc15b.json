@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Easy_Market"
+			"path" : "Easy_Market.exe"
+		},
+		{
+			"path" : "Easy_Market.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -42,14 +45,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
+					"fragment" : "-g"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/trisoil/Desktop/\u8ba1\u7b97\u673a\u5b9e\u4e60/Codes/Easy_Market/Libs/Inc"
+					"path" : "C:/Users/10956/CLionProjects/Easy_Market/Libs/Inc"
 				}
 			],
 			"language" : "C",
@@ -83,12 +86,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "Easy_Market",
-	"nameOnDisk" : "Easy_Market",
+	"nameOnDisk" : "Easy_Market.exe",
 	"paths" : 
 	{
 		"build" : ".",
